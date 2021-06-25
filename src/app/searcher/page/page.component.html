@@ -1,0 +1,14 @@
+<div class="page">
+  <div class="container vh-100">
+    <div class="row justify-content-center py-5">
+      <div class="col-12 text-center mt-4">
+        <h1 class="title fs-1">Buscador de libros</h1>
+        <p-divider></p-divider>
+      </div>
+      <app-input (libros)="cargarLibros($event)"></app-input>
+      <div class="col-12" *ngIf="libros.length != 0">
+        <app-libro-carousel [libros]="libros"></app-libro-carousel>
+      </div>
+    </div>
+  </div>
+</div>

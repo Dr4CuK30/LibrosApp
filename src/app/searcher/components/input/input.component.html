@@ -1,0 +1,48 @@
+<p-toast></p-toast>
+<div class="col-12 text-center my-2">
+  <span>Filtrar por:</span>
+  <p-selectButton
+    [options]="options"
+    [(ngModel)]="optionSelected"
+    (onChange)="loadfilters()"
+  >
+  </p-selectButton>
+</div>
+<div class="col-12 text-center mb-1">
+  <p-dropdown
+    [options]="filtros"
+    [(ngModel)]="filtroSelected"
+    optionLabel="name"
+    (onChange)="changeInput()"
+    placeholder="Selec. Filtro"
+  >
+  </p-dropdown>
+  <input pInputText [type]="inputType" [(ngModel)]="inputText" />
+  <button
+    pButton
+    type="button"
+    (click)="addParam()"
+    icon="pi pi-plus"
+    class="p-button-rounded p-button-success"
+  ></button>
+</div>
+<div class="col-12 text-center mb-4">
+  <p-chip
+    *ngFor="let keyParam of objectKeys(params)"
+    label="{{ keyParam }}: {{ params[keyParam].value }}"
+    [removable]="true"
+    (onRemove)="deleteParam(keyParam)"
+  ></p-chip>
+</div>
+<div class="col-12 text-center">
+  <button pButton type="button" label="Buscar" (click)="buscar()">
+    <i class="pi pi-search"></i>
+  </button>
+  <p-progressSpinner
+    styleClass="custom-spinner"
+    [style]="{ width: '27px', height: '27px', margin: '5px' }"
+    strokeWidth="8"
+    animationDuration=".6s"
+    *ngIf="searching"
+  ></p-progressSpinner>
+</div>

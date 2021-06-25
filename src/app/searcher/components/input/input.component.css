@@ -1,0 +1,30 @@
+i {
+  font-size: 1.3rem;
+  margin-right: 6px;
+}
+p-autoComplete {
+  margin: 5px;
+}
+span {
+  color: white;
+}
+
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+  animation: custom-progress-spinner-color 6s ease-in-out infinite;
+}
+@keyframes custom-progress-spinner-color {
+  100%,
+  0% {
+    stroke: #7c7c7c;
+  }
+  40% {
+    stroke: #ffc107;
+  }
+  66% {
+    stroke: #7c7c7c;
+  }
+  80%,
+  90% {
+    stroke: #ffc107;
+  }
+}

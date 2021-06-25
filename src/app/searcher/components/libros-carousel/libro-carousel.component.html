@@ -1,0 +1,30 @@
+<p-carousel
+  [value]="libros"
+  styleClass="custom-carousel text-center mt-5"
+  [numVisible]="4"
+  [numScroll]="4"
+  [circular]="true"
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template pTemplate="header">
+    <h3>Libros Encontrados</h3>
+  </ng-template>
+  <ng-template let-libro pTemplate="item" class="align-content-center">
+    <div class="libro-item">
+      <div class="libro-item-content">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <b>{{ libro.titulo | titlecase }}</b>
+          </li>
+          <li class="list-group-item">
+            Género: {{ libro.genero | titlecase }}
+          </li>
+          <li class="list-group-item">Año de publición: {{ libro.anho }}</li>
+          <li class="list-group-item">Páginas: {{ libro.paginas }}</li>
+          <li class="list-group-item">Autor: {{ libro.autor }}</li>
+          <li class="list-group-item">Editorial: {{ libro.editorial }}</li>
+        </ul>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
