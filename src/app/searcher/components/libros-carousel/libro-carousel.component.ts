@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { LibroExp } from 'src/app/interfaces/libro-exp.interface';
-import { Libro } from '../../../interfaces/libro.interface';
+import { LibroExp } from '../../interfaces/libro-exp.interface';
+import { Libro } from '../../interfaces/libro.interface';
 
 @Component({
   selector: 'app-libro-carousel',

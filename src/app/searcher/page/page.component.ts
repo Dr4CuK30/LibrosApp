@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LibroExp } from '../../interfaces/libro-exp.interface';
+import { LibroExp } from '../interfaces/libro-exp.interface';
 import { MessageService } from 'primeng/api';
 
 @Component({

@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Filtros, Filtro } from 'src/app/helpers/filtros';
+import { Filtros, Filtro } from '../../helpers/filtros';
 import { BooksService } from '../../books.service';
-import { dinamicParams } from '../../../interfaces/dinamic.interface';
-import { LibroExp } from '../../../interfaces/libro-exp.interface';
+import { dinamicParams } from '../../interfaces/dinamic.interface';
+import { LibroExp } from '../../interfaces/libro-exp.interface';
 
 @Component({
   selector: 'app-input',

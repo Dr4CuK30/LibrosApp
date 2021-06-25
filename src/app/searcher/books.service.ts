@@ -1,9 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Autor } from '../interfaces/autor.interface';
-import { Editorial } from '../interfaces/editorial.interface';
-import { Libro } from '../interfaces/libro.interface';
+import { Autor } from './interfaces/autor.interface';
+import { Editorial } from './interfaces/editorial.interface';
+import { Libro } from './interfaces/libro.interface';
 
 @Injectable({
   providedIn: 'root',
